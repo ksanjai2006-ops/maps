@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import { AppShell } from './components/layout/AppShell'
 import { Dashboard } from './pages/Dashboard'
 import { MapPage } from './pages/MapPage'
@@ -23,7 +23,7 @@ export default function App() {
   useOnlineStatus()
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<AppShell />}>
           <Route index element={<Dashboard />} />
@@ -43,6 +43,6 @@ export default function App() {
           <Route path="settings" element={<SettingsPage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
